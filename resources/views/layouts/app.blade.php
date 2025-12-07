@@ -18,6 +18,10 @@
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
+            @section('content')
+                <h1>Mi menú</h1>
+            @endsection
+
             <!-- Page Heading -->
             @isset($header)
                 <header class="bg-white shadow">
@@ -29,7 +33,8 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content')
+
             </main>
         </div>
     </body>
